@@ -56,13 +56,13 @@ function updateTeamLogos() {
     const awayLogo = getTeamLogo(awayTeamName);
 
     if (homeLogo) {
-        homeLogoElement.innerHTML = `<img src="${homeLogo}" alt="${homeTeamName}" style="width: 50px; height: 50px; object-fit: contain; border-radius: 8px; background: rgba(255,255,255,0.9); padding: 3px; box-shadow: 0 2px 8px rgba(0,0,0,0.2);">`;
+        homeLogoElement.innerHTML = `<img src="${homeLogo}" alt="${homeTeamName}" style="width: 50px; height: 50px; object-fit: contain; border-radius: 8px; background: rgba(255,255,255,0.9); padding: 3px;">`;
     } else {
         homeLogoElement.textContent = matchConfig.homeTeam.abbreviation;
     }
 
     if (awayLogo) {
-        awayLogoElement.innerHTML = `<img src="${awayLogo}" alt="${awayTeamName}" style="width: 50px; height: 50px; object-fit: contain; border-radius: 8px; background: rgba(255,255,255,0.9); padding: 3px; box-shadow: 0 2px 8px rgba(0,0,0,0.2);">`;
+        awayLogoElement.innerHTML = `<img src="${awayLogo}" alt="${awayTeamName}" style="width: 50px; height: 50px; object-fit: contain; border-radius: 8px; background: rgba(255,255,255,0.9); padding: 3px;">`;
     } else {
         awayLogoElement.textContent = matchConfig.awayTeam.abbreviation;
     }
