@@ -1,0 +1,8 @@
+/**Hide sidebar**/
+aside.sidebar-container.container.sidebar-invisible {
+    display: none !important;
+}
+
+.page_body {
+    margin: 0 !important;
+}

@@ -207,5 +207,3 @@ document.addEventListener('DOMContentLoaded', function () {
     // Renderizar players dinâmicos
     renderDynamicPlayers();
 });
-
-// <script src='https://cdn.jsdelivr.net/gh/shdwmere/content-blogfut/dynamicPlayer.js'/>
