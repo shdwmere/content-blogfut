@@ -13,6 +13,7 @@ const teamLogos = {
     "SANTOS": "https://upload.wikimedia.org/wikipedia/commons/1/15/Santos_Logo.png",
     "SÃO PAULO": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Brasao_do_Sao_Paulo_Futebol_Clube.svg/2054px-Brasao_do_Sao_Paulo_Futebol_Clube.svg.png",
     "SPORT RECIFE": "https://upload.wikimedia.org/wikipedia/pt/1/17/Sport_Club_do_Recife.png",
+    "LDU QUITO": "https://upload.wikimedia.org/wikipedia/commons/e/e1/Liga_de_Quito_deportiva.png",
     "VASCO DA GAMA": "https://upload.wikimedia.org/wikipedia/pt/a/ac/CRVascodaGama.png",
     "FORTALEZA": "https://upload.wikimedia.org/wikipedia/commons/e/e9/Fortaleza_EC_2018.png",
     "VÉLEZ SÁRSFIELD": "https://upload.wikimedia.org/wikipedia/commons/2/21/Escudo_del_Club_Atl%C3%A9tico_V%C3%A9lez_Sarsfield.svg"
