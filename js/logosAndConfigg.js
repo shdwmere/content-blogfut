@@ -1,32 +1,122 @@
 // ==========================================
-// BANCO DE LOGOS DOS TIMES
+// BANCO DE DADOS DOS TIMES
 // ==========================================
 
-const teamLogos = {
-    "ATLETICO MG": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/Atletico_mineiro_galo.png/1200px-Atletico_mineiro_galo.png",
-    "ATLÉTICO NACIONAL": "https://upload.wikimedia.org/wikipedia/commons/d/d7/Atl%C3%A9tico_Nacional.png",
-    "BOTAFOGO": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/Escudo_Botafogo.png/800px-Escudo_Botafogo.png",
-    "BAHIA": "https://upload.wikimedia.org/wikipedia/pt/9/90/ECBahia.png",
-    "CORINTHIANS": "https://upload.wikimedia.org/wikipedia/pt/b/b4/Corinthians_simbolo.png",
-    "FLAMENGO": "https://upload.wikimedia.org/wikipedia/commons/2/22/Logo_Flamengo_crest_1980-2018.png",
-    "FLUMINENSE": "https://upload.wikimedia.org/wikipedia/commons/a/ad/Fluminense_FC_escudo.png",
-    "GRÊMIO": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Gremio_logo.svg/1718px-Gremio_logo.svg.png",
-    "INTERNACIONAL": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/Escudo_do_Sport_Club_Internacional.svg/2048px-Escudo_do_Sport_Club_Internacional.svg.png",
-    "PALMEIRAS": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/10/Palmeiras_logo.svg/2048px-Palmeiras_logo.svg.png",
-    "SANTOS": "https://upload.wikimedia.org/wikipedia/commons/1/15/Santos_Logo.png",
-    "SÃO PAULO": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Brasao_do_Sao_Paulo_Futebol_Clube.svg/2054px-Brasao_do_Sao_Paulo_Futebol_Clube.svg.png",
-    "SPORT RECIFE": "https://upload.wikimedia.org/wikipedia/pt/1/17/Sport_Club_do_Recife.png",
-    "VASCO DA GAMA": "https://upload.wikimedia.org/wikipedia/pt/a/ac/CRVascodaGama.png",
-    "FORTALEZA": "https://upload.wikimedia.org/wikipedia/commons/e/e9/Fortaleza_EC_2018.png",
-    "VÉLEZ SÁRSFIELD": "https://upload.wikimedia.org/wikipedia/commons/2/21/Escudo_del_Club_Atl%C3%A9tico_V%C3%A9lez_Sarsfield.svg"
+const teamsDatabase = {
+    "ATLETICO MG": {
+        name: "Atlético Mineiro",
+        abbreviation: "CAM",
+        logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/Atletico_mineiro_galo.png/1200px-Atletico_mineiro_galo.png"
+    },
+    "ATLÉTICO NACIONAL": {
+        name: "Atlético Nacional",
+        abbreviation: "NAC",
+        logo: "https://upload.wikimedia.org/wikipedia/commons/d/d7/Atl%C3%A9tico_Nacional.png"
+    },
+    "BOTAFOGO": {
+        name: "Botafogo",
+        abbreviation: "BOT",
+        logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/Escudo_Botafogo.png/800px-Escudo_Botafogo.png"
+    },
+    "BAHIA": {
+        name: "Bahia",
+        abbreviation: "BAH",
+        logo: "https://upload.wikimedia.org/wikipedia/pt/9/90/ECBahia.png"
+    },
+    "CORINTHIANS": {
+        name: "Corinthians",
+        abbreviation: "COR",
+        logo: "https://upload.wikimedia.org/wikipedia/pt/b/b4/Corinthians_simbolo.png"
+    },
+    "FLAMENGO": {
+        name: "Flamengo",
+        abbreviation: "FLA",
+        logo: "https://upload.wikimedia.org/wikipedia/commons/2/22/Logo_Flamengo_crest_1980-2018.png"
+    },
+    "FLUMINENSE": {
+        name: "Fluminense",
+        abbreviation: "FLU",
+        logo: "https://upload.wikimedia.org/wikipedia/commons/a/ad/Fluminense_FC_escudo.png"
+    },
+    "GRÊMIO": {
+        name: "Grêmio",
+        abbreviation: "GRE",
+        logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Gremio_logo.svg/1718px-Gremio_logo.svg.png"
+    },
+    "INTERNACIONAL": {
+        name: "Internacional",
+        abbreviation: "INT",
+        logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/Escudo_do_Sport_Club_Internacional.svg/2048px-Escudo_do_Sport_Club_Internacional.svg.png"
+    },
+    "PALMEIRAS": {
+        name: "Palmeiras",
+        abbreviation: "PAL",
+        logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/10/Palmeiras_logo.svg/2048px-Palmeiras_logo.svg.png"
+    },
+    "SANTOS": {
+        name: "Santos",
+        abbreviation: "SAN",
+        logo: "https://upload.wikimedia.org/wikipedia/commons/1/15/Santos_Logo.png"
+    },
+    "SÃO PAULO": {
+        name: "São Paulo",
+        abbreviation: "SAO",
+        logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Brasao_do_Sao_Paulo_Futebol_Clube.svg/2054px-Brasao_do_Sao_Paulo_Futebol_Clube.svg.png"
+    },
+    "SPORT RECIFE": {
+        name: "Sport Recife",
+        abbreviation: "SPT",
+        logo: "https://upload.wikimedia.org/wikipedia/pt/1/17/Sport_Club_do_Recife.png"
+    },
+    "VASCO DA GAMA": {
+        name: "Vasco da Gama",
+        abbreviation: "VAS",
+        logo: "https://upload.wikimedia.org/wikipedia/pt/a/ac/CRVascodaGama.png"
+    },
+    "FORTALEZA": {
+        name: "Fortaleza",
+        abbreviation: "FOR",
+        logo: "https://upload.wikimedia.org/wikipedia/commons/e/e9/Fortaleza_EC_2018.png"
+    },
+    "VÉLEZ SÁRSFIELD": {
+        name: "Vélez Sársfield",
+        abbreviation: "VEL",
+        logo: "https://upload.wikimedia.org/wikipedia/commons/2/21/Escudo_del_Club_Atl%C3%A9tico_V%C3%A9lez_Sarsfield.svg"
+    },
+    "LDU QUITO": {
+        name: "LDU Quito",
+        abbreviation: "LDU",
+        logo: "https://upload.wikimedia.org/wikipedia/commons/e/e1/Liga_de_Quito_deportiva.png"
+    }
 };
 
+// Compatibilidade com código legado
+const teamLogos = {};
+Object.keys(teamsDatabase).forEach(key => {
+    teamLogos[key] = teamsDatabase[key].logo;
+});
+
 // ==========================================
-// SISTEMA DE LOGOS
+// SISTEMA DE TIMES - FUNÇÕES UTILITÁRIAS
 // ==========================================
 
+function getTeamData(teamName) {
+    return teamsDatabase[teamName.toUpperCase()] || null;
+}
+
 function getTeamLogo(teamName) {
-    return teamLogos[teamName.toUpperCase()] || null;
+    const teamData = getTeamData(teamName);
+    return teamData ? teamData.logo : null;
+}
+
+function getTeamAbbreviation(teamName) {
+    const teamData = getTeamData(teamName);
+    return teamData ? teamData.abbreviation : teamName.substring(0, 3).toUpperCase();
+}
+
+function getTeamFullName(teamName) {
+    const teamData = getTeamData(teamName);
+    return teamData ? teamData.name : teamName;
 }
 
 // ==========================================
@@ -168,7 +258,6 @@ function updatePageContent() {
     const infoTime = document.getElementById('info-time');
     const infoStadium = document.getElementById('info-stadium');
     const infoCategory = document.getElementById('info-category');
-    const infoBroadcast = document.getElementById('info-broadcast');
 
     if (infoDate) infoDate.textContent = matchConfig.date;
     if (infoTime) infoTime.textContent = matchConfig.time;
